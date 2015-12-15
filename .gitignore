@@ -1,0 +1,12 @@
+heap# Created by .ignore support plugin (hsz.mobi)
+target
+
+*.class
+
+.project
+.settings
+.classpath
+
+.idea/workspace.xml
+workspace.xml
+answers/answers.iml

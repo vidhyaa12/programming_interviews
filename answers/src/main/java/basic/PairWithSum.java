@@ -9,21 +9,24 @@ import java.util.Map;
  * Find all pairs of numbers that sum to a given value
  */
 public class PairWithSum {
-    public void findPairs(List<Integer> numbers, int sum) {
+    public Map<Integer, Integer> findPairs(List<Integer> numbers, int sum) {
         if (numbers == null || numbers.isEmpty()) {
-            return;
+            return null;
         }
 
-        Map<Integer, Integer> numberToReqNum = Maps.newHashMap();
+        Map<Integer, Integer> numberToReqNum = Maps.newHashMapWithExpectedSize(numbers.size());
 
         for (Integer number : numbers) {
             numberToReqNum.put(number, sum - number);
         }
 
+        Map<Integer, Integer> result = Maps.newHashMapWithExpectedSize(numbers.size());
+
         for (Integer number : numbers) {
             if (numberToReqNum.containsKey(numberToReqNum.get(number))) {
-                System.out.println(number + " " + numberToReqNum.get(number));
+                result.put(number, numberToReqNum.get(number));
             }
         }
+        return result;
      }
 }

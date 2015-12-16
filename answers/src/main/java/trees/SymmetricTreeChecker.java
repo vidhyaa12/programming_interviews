@@ -1,4 +1,4 @@
-package basic;
+package trees;
 
 public class SymmetricTreeChecker {
     public static boolean isSymmetric(Node n) {

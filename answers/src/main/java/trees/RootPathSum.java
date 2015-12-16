@@ -1,4 +1,4 @@
-package basic;
+package trees;
 
 /**
  * Count the number of paths from the root to any node that sum to a given value

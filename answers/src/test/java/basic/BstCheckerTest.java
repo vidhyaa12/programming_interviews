@@ -2,6 +2,8 @@ package basic;
 
 import junit.framework.Assert;
 import org.testng.annotations.Test;
+import trees.BstChecker;
+import trees.Node;
 
 /**
  * Validate if a few test binary trees are binary search trees
@@ -30,4 +32,7 @@ public class BstCheckerTest {
 
         Assert.assertTrue(new BstChecker().isBst(n1, null, null));
     }
+
+    // TODO: generate an array, sort it and generate a valid bst of it
+
 }

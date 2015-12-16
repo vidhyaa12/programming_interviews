@@ -1,4 +1,4 @@
-package basic;
+package trees;
 
 /**
  * Node in a binary tree

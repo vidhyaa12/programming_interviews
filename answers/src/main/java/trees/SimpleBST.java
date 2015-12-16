@@ -1,4 +1,4 @@
-package basic;
+package trees;
 
 public class SimpleBST {
 

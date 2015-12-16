@@ -1,4 +1,4 @@
-package basic;
+package trees;
 
 /**
  * http://algorithms.tutorialhorizon.com/sorted-array-to-binary-search-tree-of-minimal-height/

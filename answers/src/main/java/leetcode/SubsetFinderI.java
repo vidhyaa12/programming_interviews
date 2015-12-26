@@ -1,4 +1,4 @@
-package basic;
+package leetcode;
 
 public class SubsetFinderI {
     private static void findSubsets(int array[]) {

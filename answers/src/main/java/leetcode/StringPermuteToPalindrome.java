@@ -1,4 +1,4 @@
-package basic;
+package leetcode;
 
 
 import java.util.HashMap;
@@ -28,6 +28,7 @@ public class StringPermuteToPalindrome {
         // 1. if all characters have even count
         // 2. if only 1 character has count 1 and all other characters have even count
         // 3. length of the String is odd and 1 character has count 1 and other characters have equal count
+        // 4. length of the String is odd and 1 character has odd count and other characters have even count
         int numOfCharsWithEvenCount = 0;
         int numOfCharsWithOddCountGreaterThanOne = 0;
         int numOfCharsWithCountOne = 0;

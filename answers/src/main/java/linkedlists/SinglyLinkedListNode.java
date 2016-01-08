@@ -22,7 +22,6 @@ public class SinglyLinkedListNode<T> implements Comparable<T> {
         this.next = ref;
     }
 
-    @Override
     public int compareTo(T arg) {
         if(arg == this.value){
             return 0;

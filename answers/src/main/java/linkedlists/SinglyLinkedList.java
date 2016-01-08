@@ -21,17 +21,17 @@ public class SinglyLinkedList<T> {
         return sz;
     }
 
-    public SinglyLinkedListNode<T> get( int i) {
+    public SinglyLinkedListNode<T> get(int i) {
         int itr = 0;
         SinglyLinkedListNode<T> node = head;
-        while(itr < i && node != null) {
+        while (itr < i && node != null) {
             itr++;
             node = node.getNext();
         }
         return node;
     }
 
-    public void add(T element){
+    public void add(T element) {
 
         SinglyLinkedListNode<T> nd = new SinglyLinkedListNode<T>();
         nd.setValue(element);
@@ -39,20 +39,20 @@ public class SinglyLinkedList<T> {
         /**
          * check if the list is empty
          */
-        if(head == null){
+        if (head == null) {
             //since there is only one element, both head and
             //tail points to the same object.
             head = nd;
         } else {
             SinglyLinkedListNode<T> node = head;
-            while(node.getNext() != null ) {
+            while (node.getNext() != null) {
                 node = node.getNext();
             }
             node.setNext(nd);
         }
     }
 
-    public void addAfter(T element, T after){
+    public void addAfter(T element, T after) {
 
         SinglyLinkedListNode<T> tmp = head;
         SinglyLinkedListNode<T> refNode = null;
@@ -60,18 +60,18 @@ public class SinglyLinkedList<T> {
         /**
          * Traverse till given element
          */
-        while(true){
-            if(tmp == null){
+        while (true) {
+            if (tmp == null) {
                 break;
             }
-            if(tmp.compareTo(after) == 0){
+            if (tmp.compareTo(after) == 0) {
                 //found the target node, add after this node
                 refNode = tmp;
                 break;
             }
             tmp = tmp.getNext();
         }
-        if(refNode != null){
+        if (refNode != null) {
             //add element after the target node
             SinglyLinkedListNode<T> nd = new SinglyLinkedListNode<T>();
             nd.setValue(element);
@@ -83,17 +83,17 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public void deleteFront(){
+    public void deleteFront() {
 
-        if(head == null){
+        if (head == null) {
             System.out.println("Underflow...");
         }
         SinglyLinkedListNode<T> tmp = head;
         head = tmp.getNext();
-        System.out.println("Deleted: "+tmp.getValue());
+        System.out.println("Deleted: " + tmp.getValue());
     }
 
-    public void deleteAfter(T after){
+    public void deleteAfter(T after) {
 
         SinglyLinkedListNode<T> tmp = head;
         SinglyLinkedListNode<T> refNode = null;
@@ -101,18 +101,18 @@ public class SinglyLinkedList<T> {
         /**
          * Traverse till given element
          */
-        while(true){
-            if(tmp == null){
+        while (true) {
+            if (tmp == null) {
                 break;
             }
-            if(tmp.compareTo(after) == 0){
+            if (tmp.compareTo(after) == 0) {
                 //found the target node, add after this node
                 refNode = tmp;
                 break;
             }
             tmp = tmp.getNext();
         }
-        if(refNode != null){
+        if (refNode != null) {
             tmp = refNode.getNext();
             refNode.setNext(tmp.getNext());
             System.out.println("Deleted: " + tmp.getValue());
@@ -121,11 +121,11 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public void traverse(){
+    public void traverse() {
 
         SinglyLinkedListNode<T> tmp = head;
-        while(true){
-            if(tmp == null){
+        while (true) {
+            if (tmp == null) {
                 break;
             }
             System.out.println(tmp.getValue());
@@ -140,10 +140,10 @@ public class SinglyLinkedList<T> {
 
         SinglyLinkedListNode prev = null;
         SinglyLinkedListNode current = head;
-        SinglyLinkedListNode next = ( current != null) ? current.getNext() : null;
+        SinglyLinkedListNode next = (current != null) ? current.getNext() : null;
         SinglyLinkedListNode nextToNext = (next != null) ? next.getNext() : null;
 
-        while ( current != null ) {
+        while (current != null) {
             current.setNext(prev);
             prev = current;
             current = next;
@@ -169,10 +169,10 @@ public class SinglyLinkedList<T> {
             index++;
         }
 
-        SinglyLinkedListNode next = ( current != null) ? current.getNext() : null;
+        SinglyLinkedListNode next = (current != null) ? current.getNext() : null;
         SinglyLinkedListNode nextToNext = (next != null) ? next.getNext() : null;
 
-        while ( current != null ) {
+        while (current != null) {
 //            System.out.println(print(prev) + " -> " + print(current) + " -> " + print(next) + " -> " + print(nextToNext));
             current.setNext(prev);
             prev = current;
@@ -238,7 +238,7 @@ public class SinglyLinkedList<T> {
         return Objects.hashCode(head);
     }
 
-    public static void main(String a[]){
+    public static void main(String a[]) {
         SinglyLinkedList<Integer> sl = new SinglyLinkedList<Integer>(null);
         sl.add(3);
         sl.add(32);

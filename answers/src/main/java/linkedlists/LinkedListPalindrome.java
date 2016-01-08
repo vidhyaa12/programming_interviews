@@ -3,9 +3,6 @@ package linkedlists;
 import java.util.List;
 import java.util.Stack;
 
-/**
- * Created by vidhyaa on 10/28/15.
- */
 public class LinkedListPalindrome {
     public static boolean isLinkedListPalindrome(List<Character> inputList) {
         if (inputList == null || inputList.size() == 0) {

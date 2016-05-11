@@ -49,7 +49,7 @@ public class UserSet implements Iterable<Integer> {
                         return;
                     }
                 }
-                bitIdx = 0;
+                bitIdx = 0; // after every byte, bitIdx should be reset to 0
             }
         }
 

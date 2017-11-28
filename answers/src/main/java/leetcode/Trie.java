@@ -29,16 +29,16 @@ public class Trie {
     private void insertHelper(TrieNode trieNode, String word) {
         if (word.equals(EMPTY_STR)) {
             trieNode.isEndOfWord = true;
-        }
+        } else {
+            char firstChar = word.charAt(0);
+            TrieNode childForFirstChar = trieNode.children.get(firstChar);
 
-        char firstChar = word.charAt(0);
-        TrieNode childForFirstChar = trieNode.children.get(firstChar);
-
-        if (childForFirstChar == null) {
-            childForFirstChar = new TrieNode();
-            trieNode.children.put(firstChar, childForFirstChar);
+            if (childForFirstChar == null) {
+                childForFirstChar = new TrieNode();
+                trieNode.children.put(firstChar, childForFirstChar);
+            }
+            insertHelper(childForFirstChar, word.substring(1));
         }
-        insertHelper(childForFirstChar, word.substring(1));
     }
 
     // Returns if the word is in the trie.

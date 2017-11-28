@@ -19,7 +19,7 @@ public class CombinationSumWithDuplicatesAllowed {
 
     public void dfs(List<List<Integer>> result, int start, int sum, List<Integer> currentSubset, int k) {
         if (currentSubset.size() == k) {
-            if ( sum == 0) {
+            if (sum == 0) {
                 List<Integer> temp = new ArrayList<Integer>();
                 temp.addAll(currentSubset);
                 result.add(temp);

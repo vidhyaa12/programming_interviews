@@ -1,0 +1,10 @@
+logging:
+  level: INFO
+  loggers:
+    interview: DEBUG
+
+
+# the only required property is resourcePackage, for more config options see below
+swagger:
+  resourcePackage: io.branch.resources
+  enabled: true

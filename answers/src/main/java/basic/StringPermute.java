@@ -50,7 +50,6 @@ public class StringPermute {
             return permutations;
         }
 
-        char c = str.charAt(0);
         String remainder = str.substring(1);
         List<String> words = getPerms(remainder);
 
